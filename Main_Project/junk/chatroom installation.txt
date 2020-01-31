@@ -1,0 +1,17 @@
+CREATE TABLE `profesio`.`Online` ( `SNO` SERIAL NOT NULL , `USER_NAME` VARCHAR(200) NOT NULL , `ACTIVE` INT(4) NOT NULL DEFAULT '1' ) ENGINE = InnoDB;
+INSERT INTO `online` (`SNO`, `USER_NAME`, `ACTIVE`) VALUES ('2', 'Nitin', '1');
+INSERT INTO `online` (`SNO`, `USER_NAME`, `ACTIVE`) VALUES ('3', 'Ritik', '1');
+INSERT INTO `online` (`SNO`, `USER_NAME`, `ACTIVE`) VALUES ('4', 'Ayush', '1');
+INSERT INTO `online` (`SNO`, `USER_NAME`, `ACTIVE`) VALUES ('5', 'Natasha', '1');
+
+
+
+
+INSERT INTO `messages` (`from_id_db`, `to_id_db`, `from_name_db`, `to_name_db`, `message_db`, `time_stanp_db`) VALUES ('C1010', 'E1010', 'ritik', 'nitin', 'hi', CURRENT_TIMESTAMP);
+INSERT INTO `messages` (`from_id_db`, `to_id_db`, `from_name_db`, `to_name_db`, `message_db`, `time_stanp_db`) VALUES ('E1010', 'C1010', 'nitin','ritik',  'hi', CURRENT_TIMESTAMP);
+INSERT INTO `messages` (`from_id_db`, `to_id_db`, `from_name_db`, `to_name_db`, `message_db`, `time_stanp_db`) VALUES ('C1010', 'E1010', 'ritik', 'nitin', 'hi', CURRENT_TIMESTAMP);
+INSERT INTO `messages` (`from_id_db`, `to_id_db`, `from_name_db`, `to_name_db`, `message_db`, `time_stanp_db`) VALUES ('E1010', 'C1010', 'nitin','ritik',  'hi', CURRENT_TIMESTAMP);
+INSERT INTO `messages` (`from_id_db`, `to_id_db`, `from_name_db`, `to_name_db`, `message_db`, `time_stanp_db`) VALUES ('C1010', 'E1010', 'ritik', 'nitin', 'hi', CURRENT_TIMESTAMP);
+INSERT INTO `messages` (`from_id_db`, `to_id_db`, `from_name_db`, `to_name_db`, `message_db`, `time_stanp_db`) VALUES ('E1010', 'C1010','nitin', 'ritik',  'hi', CURRENT_TIMESTAMP);
+INSERT INTO `messages` (`from_id_db`, `to_id_db`, `from_name_db`, `to_name_db`, `message_db`, `time_stanp_db`) VALUES ('C1010', 'E1010', 'ritik', 'nitin', 'hi', CURRENT_TIMESTAMP);
+INSERT INTO `messages` (`from_id_db`, `to_id_db`, `from_name_db`, `to_name_db`, `message_db`, `time_stanp_db`) VALUES ('E1010', 'C1010','nitin', 'ritik',  'hi', CURRENT_TIMESTAMP);

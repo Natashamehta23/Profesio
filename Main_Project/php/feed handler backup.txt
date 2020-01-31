@@ -1,0 +1,47 @@
+<?php
+require './../config/config.php';
+    $curr_log_in='c1';
+    $profile_page_='c1';
+    if($curr_log_in!=)
+    {
+        $query = mysqli_query($con, "SELECT * FROM  `posts` WHERE user_id_db='$profile_page' ORDER BY time_db   ASC ");
+	    if(mysqli_num_rows($query) == 0)
+		    echo 'process failed';
+        else{
+          while($row = mysqli_fetch_array($query))
+          {
+              echo '<div>';
+            echo '<form action="./search_handler.php?q=Ayush" method="POST">';
+            echo '<div class="main_column column">';
+            echo $row['user_id_db'];
+            echo "<br>";
+            echo $row['post_text_db'];
+            echo "<br>";
+            echo $row['time_db'];
+            echo "<br>";
+            echo $row['accept_link'];
+            echo "<br><br><br><br><hr><br></div></div>";
+            echo '<div class="feeds_user_details column">
+                        <a href="#nitin_kumar">  
+                        <img src="./assets/images/profile_pics/defaults/head_emerald.png"> </a>
+                        <div class="user_details_left_right">
+                        <a href="#nitin_kumar">';
+            echo 'User_name_goes here'.'<br></a>
+                <br>
+                <br>	
+                </div>
+                <!--<input type="submit" name="E3" class="danger" value="Remove Friend">
+                <br>
+                <input type="submit" class="default" value="Request Sent">
+                <br>-->
+                <br>
+                <input type="submit" name="E3" class="success" value="Request Service" id="accept_button"><br><br>
+                </form>
+                </div>';         
+            }
+
+
+        }
+    }
+    
+?>

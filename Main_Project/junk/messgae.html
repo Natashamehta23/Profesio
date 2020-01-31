@@ -1,0 +1,252 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Profesi&#243; (Skill Allocation System)</title>
+
+	<!-- Javascript -->
+	<!--<script src="./assets/js/jquery.min.js"></script>
+	<script src="./assets/js/bootstrap.js"></script>
+	<script src="./assets/js/bootbox.min.js"></script>
+	<script src="./assets/js/demo.js"></script>
+	<script src="./assets/js/jquery.jcrop.js"></script>
+	<script src="./assets/js/jcrop_bits.js"></script>-->
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<!--<link rel="stylesheet" href="./assets/css/jquery.Jcrop.css" type="text/css">-->
+	<?php 
+		$userLoggedIn="Nitin";
+		$Task_count='80';
+		$Upvotes='100';	 ?>
+</head>
+<body>
+
+	<div class="top_bar"> 
+
+		<div class="logo">
+			<a href="#index_page">Profesi&#243;</a>
+		</div>
+
+
+		<div class="search">
+
+			<form action="#search.php" method="GET" name="search_form">
+				<input type="text"  name="q" placeholder="Search..." autocomplete="off" id="search_text_input">
+
+				<div class="button_holder">
+					<img src="./assets/images/icons/magnifying_glass.png">
+				</div>
+
+			</form>
+
+			<div class="search_results">
+			</div>
+
+			<div class="search_results_footer_empty">
+			</div>
+
+
+
+		</div>
+
+		<nav>
+			
+
+			<a href="#self_home_user">
+				<?php echo $userLoggedIn; ?>username			</a>
+			<a href="#home">
+				<i class="fa fa-home fa-lg">home</i>
+			</a>
+			<a href="#" >
+				<i class="fa fa-envelope fa-lg">message</i>
+							</a>
+			for implementing php
+			&#39; is same as '
+			<a href="#" >
+				<i class="fa fa-bell fa-lg">notification</i>
+							</a>
+			<a href="#(connections)requests.php">
+				<i class="fa fa-users fa-lg">request</i>
+							</a>
+			<a href="#settings.php">
+				<i class="fa fa-cog fa-lg">settings</i>
+			</a>
+			<a href="./includes/handlers/logout.php">
+				<i class="fa fa-sign-out fa-lg">logout</i>
+			</a>
+
+		</nav>
+
+		<div class="dropdown_data_window" style="height:0px; border:none;"></div>
+		<input type="hidden" id="dropdown_data_type" value="">
+
+
+	</div>
+	<div class="wrapper"><script> 
+          $(function() {
+              $('#profileTabs a[href="#messages_div"]').tab('show');
+          });
+        </script>
+ 	<style type="text/css">
+	 	.wrapper {
+	 		margin-left: 0px;
+			padding-left: 0px;
+	 	}
+
+ 	</style>
+	
+ 	<div class="profile_left">
+ 		<img src="./messgae_files/head_emerald.png">
+
+ 		<div class="profile_info">
+ 			<p>Posts: 0</p>
+ 			<p>Likes: 0</p>
+ 			<p>Friends: 0</p>
+ 		</div>
+
+ 		<form action="http://localhost/Social-Network-using-PHP-MySQL-master/Social/social_media/natasha_mehta" method="POST">
+ 			<input type="submit" name="" class="default" value="Request Sent"><br> 		</form>
+ 		<input type="submit" class="deep_blue" data-toggle="modal" data-target="#post_form" value="Post Something">
+
+    <div class="profile_info_bottom">0 Mutual friends</div>
+ 	</div>
+
+
+	<div class="profile_main_column column">
+
+    <ul class="nav nav-tabs" role="tablist" id="profileTabs">
+      <li role="presentation" class=""><a href="http://localhost/Social-Network-using-PHP-MySQL-master/Social/social_media/natasha_mehta#newsfeed_div" aria-controls="newsfeed_div" role="tab" data-toggle="tab" aria-expanded="false">Newsfeed</a></li>
+      <li role="presentation" class="active"><a href="http://localhost/Social-Network-using-PHP-MySQL-master/Social/social_media/natasha_mehta#messages_div" aria-controls="messages_div" role="tab" data-toggle="tab" aria-expanded="true">Messages</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+      <div role="tabpanel" class="tab-pane fade" id="newsfeed_div">
+        <div class="posts_area"><br>
+<b>Warning</b>:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in <b>C:\xampp\htdocs\Social-Network-using-PHP-MySQL-master\Social\social_media\includes\classes\Post.php</b> on line <b>383</b><br>
+</div>
+        <img id="loading" src="./messgae_files/loading.gif" style="display: none;">
+      </div>
+
+
+      <div role="tabpanel" class="tab-pane fade active in" id="messages_div">
+        <h4>You and <a href="http://localhost/Social-Network-using-PHP-MySQL-master/Social/social_media/natasha_mehta">Natasha Mehta</a></h4><hr><br><div class="loaded_messages" id="scroll_messages"><div class="message" id="blue">ritik loves you
+</div><br><br></div>
+
+
+        <div class="message_post">
+          <form action="http://localhost/Social-Network-using-PHP-MySQL-master/Social/social_media/natasha_mehta" method="POST">
+              <textarea name="message_body" id="message_textarea" placeholder="Write your message ..."></textarea>
+              <input type="submit" name="post_message" class="info" id="message_submit" value="Send">
+          </form>
+
+        </div>
+
+        <script>
+          var div = document.getElementById("scroll_messages");
+          div.scrollTop = div.scrollHeight;
+        </script>
+      </div>
+
+
+    </div>
+
+
+	</div>
+
+<!-- Modal -->
+<div class="modal fade" id="post_form" tabindex="-1" role="dialog" aria-labelledby="postModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="postModalLabel">Post something!</h4>
+      </div>
+
+      <div class="modal-body">
+      	<p>This will appear on the user's profile page and also their newsfeed for your friends to see!</p>
+
+      	<form class="profile_post" action="http://localhost/Social-Network-using-PHP-MySQL-master/Social/social_media/natasha_mehta" method="POST">
+      		<div class="form-group">
+      			<textarea class="form-control" name="post_body"></textarea>
+      			<input type="hidden" name="user_from" value="nitin_kumar">
+      			<input type="hidden" name="user_to" value="natasha_mehta">
+      		</div>
+      	</form>
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" name="post_button" id="submit_profile_post">Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  var userLoggedIn = 'nitin_kumar';
+  var profileUsername = 'natasha_mehta';
+
+  $(document).ready(function() {
+
+    $('#loading').show();
+
+    //Original ajax request for loading first posts 
+    $.ajax({
+      url: "includes/handlers/ajax_load_profile_posts.php",
+      type: "POST",
+      data: "page=1&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
+      cache:false,
+
+      success: function(data) {
+        $('#loading').hide();
+        $('.posts_area').html(data);
+      }
+    });
+
+    $(window).scroll(function() {
+      var height = $('.posts_area').height(); //Div containing posts
+      var scroll_top = $(this).scrollTop();
+      var page = $('.posts_area').find('.nextPage').val();
+      var noMorePosts = $('.posts_area').find('.noMorePosts').val();
+
+      if ((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) && noMorePosts == 'false') {
+        $('#loading').show();
+
+        var ajaxReq = $.ajax({
+          url: "includes/handlers/ajax_load_profile_posts.php",
+          type: "POST",
+          data: "page=" + page + "&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
+          cache:false,
+
+          success: function(response) {
+            $('.posts_area').find('.nextPage').remove(); //Removes current .nextpage 
+            $('.posts_area').find('.noMorePosts').remove(); //Removes current .nextpage 
+
+            $('#loading').hide();
+            $('.posts_area').append(response);
+          }
+        });
+
+      } //End if 
+
+      return false;
+
+    }); //End (window).scroll(function())
+
+
+  });
+
+  </script>
+
+
+
+
+
+	</div>
+
+</body></html>
