@@ -1,0 +1,113 @@
+TO DO
+integrate sonali login page php which has feature to reactivae account
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sessions
+
+login.php
+// has details of loged in user
+$_SESSION['email_session']=$mail_id;
+$_SESSION['username_session']=$row['username_db'];
+$_SESSION['cust_id_session']=$row['cust_id_db'];
+
+//sessions.php
+
+if employee logs in
+$_SESSION['user_logged_id']=$user_id;
+    $_SESSION['first_session_logged_id']=$result['first_name_db'];
+    $_SESSION['last_session_logged_id']=$result['last_name_db'];
+    $_SESSION['exp_session_logged_id']=$result['experience_db'];
+    $_SESSION['add_session_logged_id']=$result['address_db'];
+    $_SESSION['city_session_logged_id']=$result['city_db'];
+    $_SESSION['tele_session_logged_id']=$result['telephone_db'];
+    $_SESSION['prof_session_logged_id']=$result['profession_db'];
+    $_SESSION['charges_session_logged_id']=$result['charges_db'];
+    $_SESSION['age_session_logged_id']=$result['age_db'];
+    $_SESSION['gender_session_logged_id']=$result['gender_db'];
+
+    //$_SESSION['email_session_logged_id']=$result['email_db'];
+   // $_SESSION['pass_session_logged_id']=$result['pass_db'];
+   // $_SESSION['dob_session_logged_id']=$result['dob_db'];
+    //$_SESSION['image_loc_session_logged_id']=$result['image_loc'];
+   // $_SESSION['deleted_session_logged_id']=$result['deleted'];
+    // $_SESSION['deactivate_db_session_logged_id']=$result['deactivate_db'];
+    $_SESSION['is_employee_logged_id']="yes";
+
+
+
+if client logs in
+
+
+
+ echo $_SESSION['c_user_logged_in']=$user_id;
+   echo $_SESSION['c_first_session_logged_in']=$results['first_name_db'];
+   echo $_SESSION['c_last_session_logged_in']=$results['last_name_db'];
+   echo $_SESSION['c_email_session_logged_in']=$results['email_db'];
+   echo $_SESSION['c_dob_session_logged_in']=$results['dob_db'];
+   echo $_SESSION['c_city_session_logged_in']=$results['city_db'];
+   echo $_SESSION['c_tele_session_logged_in']=$results['telephone_db'];
+    
+
+   echo $_SESSION['c_image_loc_session_logged_in']=$results['image_loc'];
+   echo $_SESSION['c_add_session_logged_in']=$results['address_db'];
+   echo $_SESSION['c_deleted_session_logged_in']=$results['deleted'];
+   echo $_SESSION['c_deactivate_db_session_logged_in']=$results['deactivate_db'];
+    //$_SESSION['c_prof_sess_logged_in']=$result['profession_db'];
+    echo $_SESSION['is_employee_logged_in']="no";
+
+
+
+
+
+profile friend.php
+
+$_SESSION['page_view_user_id']//stores user id of current id logged in
+
+message.php
+$_SESSION['to_msg_f_name']=$employee_fname;
+$_SESSION['to_msg_l_name']=$employee_lname; 
+$_SESSION['from_msg']='C1010';
+$_SESSION['to_msg']='E1010';
+
+
+
+Notes
+client uses our application to get services done from hiring employee
+hide service request button from feeds from friends from feeds fetcher profile friends  or maybe remove service request button from feedds profile friends
+
+
+
+
+//registration handler missing for client and employee
+
+
+
+
+//auto delete service request notification on accepting the request
+
+
+//auto display reviews
+
+
+//request nav bar should only be visible to user logged in as employee
+//accept handler not working
